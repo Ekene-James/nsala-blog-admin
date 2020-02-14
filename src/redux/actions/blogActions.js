@@ -30,6 +30,7 @@ export const postBlog = (blog, history) => dispatch => {
       imageUrl = downloadURL;
       return firestore.collection(`blogPosts`).add({
         category: blog.category,
+        name: blog.name,
         title: blog.title,
         text: blog.text,
         imgUrl: downloadURL,
@@ -45,6 +46,7 @@ export const postBlog = (blog, history) => dispatch => {
       const data = {
         category: blog.category,
         title: blog.title,
+        name: blog.name,
 
         BlogImgUrl: imageUrl,
         bloggerId: blog.bloggerId,

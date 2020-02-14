@@ -58,7 +58,8 @@ class Edit extends React.Component {
     const blog = {
       ...this.state,
       bloggerId: this.props.auth.profileInfo.bloggerId,
-      bloggerProfileImgUrl: this.props.auth.profileInfo.bloggerProfileImgUrl
+      bloggerProfileImgUrl: this.props.auth.profileInfo.bloggerProfileImgUrl,
+      name : this.props.auth.profileInfo.name
     };
     if (
       this.state.category.length === 0 ||
